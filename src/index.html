@@ -80,10 +80,10 @@ const CATEGORIES = [
 ];
 const SEED_PARTNERS = {
     food: [
-        { id: 1, name: "Osteria del Lupo", tagline: "Cucina bolognese autentica", promo: "10% di sconto sul conto per i soci del Bakery Partner Club, tutti i giorni escluso il sabato sera." },
+    //    { id: 1, name: "Osteria del Lupo", tagline: "Cucina bolognese autentica", promo: "10% di sconto sul conto per i soci del Bakery Partner Club, tutti i giorni escluso il sabato sera." },
     ],
     sport: [
-        { id: 2, name: "Iron Gym Bologna", tagline: "Sala pesi e functional training", promo: "Un mese di iscrizione omaggio per ogni nuovo socio Bakery, più il 20% sull'abbonamento annuale." },
+    //    { id: 2, name: "Iron Gym Bologna", tagline: "Sala pesi e functional training", promo: "Un mese di iscrizione omaggio per ogni nuovo socio Bakery, più il 20% sull'abbonamento annuale." },
     ],
 };
 function JaggedEdge({ flip }) {
@@ -415,9 +415,9 @@ function BakeryPartnerClub() {
                         React.createElement("div", { style: { fontSize: 11, color: "#e0555c", fontWeight: 700, marginTop: "auto", display: "flex", alignItems: "center", gap: 6 } },
                             React.createElement(IconTag, { size: 12 }),
                             " Vedi promozione")))),
-                    !showForm && (React.createElement("div", { style: styles.addCard, onClick: () => setShowForm(true) },
+                    !showForm /*&& (React.createElement("div", { style: styles.addCard, onClick: () => setShowForm(true) },
                         React.createElement(IconPlus, { size: 22 }),
-                        React.createElement("span", { style: { fontSize: 12, fontWeight: 700, textTransform: "uppercase" } }, "Aggiungi partner")))),
+                        React.createElement("span", { style: { fontSize: 12, fontWeight: 700, textTransform: "uppercase" } }, "Aggiungi partner")))*/),
                 currentPartners.length === 0 && !showForm && (React.createElement("p", { style: { color: "#ccc", fontSize: 13, marginTop: 16 } }, "Nessuna realt\u00E0 ancora in questa categoria. Aggiungine una."))))),
         showForm && (React.createElement("div", { style: styles.overlay, onClick: () => setShowForm(false) },
             React.createElement("div", { style: styles.modal, onClick: (e) => e.stopPropagation() },
